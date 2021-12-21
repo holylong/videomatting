@@ -1,0 +1,9 @@
+[submodule "3rdparty/ncnn"]
+	path = 3rdparty/ncnn
+	url = https://github.com/tencent/ncnn
+[submodule "3rdparty/opencv"]
+	path = 3rdparty/opencv
+	url = https://github.com/opencv/opencv
+[submodule "3rdparty/lite.ai.toolkit"]
+	path = 3rdparty/lite.ai.toolkit
+	url = https://github.com/DefTruth/lite.ai.toolkit
