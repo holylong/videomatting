@@ -3,11 +3,23 @@
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
+#include <sstream>
+#include <string>
 
 using namespace std;
 
 
+void pthelp(){
+	cout << "please input arguments like\n"
+	<< "executor modelpath modeltype imagepath"
+        << "exetucor ./ rvm-640 a.jpg" << endl;
+}
+
 int main(int argc, char* argv[]){
+    if(argc < 4){
+	pthelp();
+	return -1;
+    }
     cout << "videomatting enter" <<endl;
     NanoDet detector;
     //load model
@@ -29,11 +41,16 @@ int main(int argc, char* argv[]){
         {0.01712475f, 0.0175f, 0.01742919f},
     };
     cout << "load model" << endl;
-    detector.load("rvm-640", target_sizes[1], mean_vals[1], norm_vals[1], false);
+    stringstream ss;
+    ss << argv[1];
+    ss << "/";
+    ss << argv[2];
+    string str = ss.str();
+    detector.load(str.c_str(), target_sizes[1], mean_vals[1], norm_vals[1], false);
     vector<Object> objs;
     cv::Mat img;
-    std::cout << "img path:" << argv[1] << std::endl;
-    img = cv::imread(argv[1]);
+    std::cout << "img path:" << argv[3] << std::endl;
+    img = cv::imread(argv[3]);
     std::cout << "load image ok" << std::endl;
     cv::imshow("11", img);
     cv::Mat dst(640, 480, CV_8UC3);
