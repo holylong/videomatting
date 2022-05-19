@@ -7,3 +7,6 @@
 [submodule "3rdparty/lite.ai.toolkit"]
 	path = 3rdparty/lite.ai.toolkit
 	url = git@github.com:DefTruth/lite.ai.toolkit
+[submodule "3rdparty/opencv_contrib"]
+	path = 3rdparty/opencv_contrib
+	url = git@github.com:opencv/opencv_contrib
