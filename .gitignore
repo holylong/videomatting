@@ -1,3 +1,4 @@
 build_ninja
 build
 opencvmodules 
+build_vs 

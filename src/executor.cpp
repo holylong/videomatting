@@ -13,6 +13,7 @@ void pthelp(){
 	cout << "please input arguments like\n"
 	<< "executor modelpath modeltype imagepath"
         << "exetucor ./ rvm-640 a.jpg" << endl;
+    //./../model rvm-640 ../images/zhaoliying.jpg
 }
 
 int main(int argc, char* argv[]){
